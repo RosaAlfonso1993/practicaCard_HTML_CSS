@@ -1,0 +1,91 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  // Neutral
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1 rem, 10 px*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--very-light-gray);
+}
+
+
+//CARD
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+
+  &-universal {
+    width: 305px;
+    height: 500px;
+    color: var(--transparent-white);
+    padding-left: 4rem;
+    padding-top: 3rem;
+
+    &-text {
+      width: 191px;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    &-button {
+      padding-top: 10rem;
+
+      button {
+        padding: 1.5rem 3rem 1.5rem 3rem;
+        border-radius: 2rem;
+        color: var(--transparent-white);
+        background-color: rgba(68, 17, 17, 0);
+        border: 2px solid var(--very-light-gray);
+        outline: none; //remueve la decoracoin del boton
+      }
+    }
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 4rem;
+    color: var(--very-light-gray);
+  }
+
+  &-sedans {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 4%;
+    border-bottom-left-radius: 4%;
+  }
+  &-suvs {
+    background-color: var(--dark-cyan);
+  }
+  &-luxury {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 4%;
+    border-bottom-right-radius: 4%;
+  }
+}
+.attribution{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
